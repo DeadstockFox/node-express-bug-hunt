@@ -26,6 +26,29 @@ Fixed `quote.router.js` line 28: switch `app` to `router`. _This is the solution
 
 ### Bug 1
 
+
+'Router.use() requires a middleware function but got a ' + gettype(fn)
+
+Fixed 'quote.router.js' line line 25: added 'module.exports = router' 
+
+
+Bug 2
+
+local 404 error, failed to load resource
+
+Solution: Server.Js Line 18: Changed line to app.use(express.static('server/public'));
+
+Bug 3
+
+Local 404 error, AxiosError in status. 
+
+Solution: Client.Js Line 7: Changed url to '/quotes',
+          quote.router.js line 8: changed url to '/',
+
+
+Server is listening on port: 5007, cannot GET/ when loading page.
+
+
 ...
 
 ## Extra Practice (Optional)

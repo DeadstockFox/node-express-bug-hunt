@@ -4,7 +4,7 @@ function getQuotes() {
     // Axios GET request (http request for information from the server)
     axios({
         method: 'GET',
-        url: '/quotes}'
+        url: '/quotes',
     }).then((response) => {
         // Code that will run on successful response
         // from the server.
@@ -29,7 +29,7 @@ function getQuotes() {
     }); // ALWAYS add .catch
 }
 // Call the function
-getQuotes();
+
 
 function submitForm(event) {
     // stop page from refreshing
@@ -49,9 +49,10 @@ function submitForm(event) {
         data: quoteForServer
     }).then((response) => {
         console.log(response);
-        getQuote();
+        getQuotes();
     }).catch((error) => {
         console.log(error);
         alert('Something went wrong.');
     });
+
 }

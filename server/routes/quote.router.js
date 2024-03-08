@@ -5,7 +5,7 @@ const router = express.Router();
 let quoteList = {};
 
 // ??? GET request returns information
-router.get('/quotes', (req, res) => {
+router.get('/', (req, res) => {
     console.log('GET Request made for /quotes');
     // Send back the list of quotes!
     res.send(quoteList);
@@ -22,6 +22,7 @@ router.post('/', (req, res) => {
     res.sendStatus(201);
 });
 
+module.exports = router
 // PUT request update information
 
 // ???
